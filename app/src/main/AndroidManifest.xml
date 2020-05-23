@@ -12,27 +12,35 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AboutActivity"
+        <activity android:name=".DistrictStateActivity"
+            android:label="District Details"
+            android:parentActivityName=".StateActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".SplashScreenActivity"
             android:screenOrientation="portrait"
-            android:label="About"
-            android:parentActivityName=".StateActivity">
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+        <activity
+            android:name=".AboutActivity"
+            android:label="About"
+            android:parentActivityName=".StateActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".StateDetailWithDistrictActivity"
             android:label="State Detail"
             android:parentActivityName=".StateActivity"
-            android:screenOrientation="portrait">
-
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".StateActivity"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:screenOrientation="portrait"/>
+
         <service
             android:name=".MyFirebaseMessagingService"
             android:exported="false">
